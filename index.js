@@ -9,6 +9,10 @@ app.get("/", async (req, res) => {
     res.send("Server is up");
 });
 
+app.get("/data", async (req, res) => {
+    res.status(200).send({ university: "ADTU", class: "MCA", semester: "II" });
+});
+
 app.get("/health", async (req, res) => {
     res.status(200).send("server is healthy");
 });
